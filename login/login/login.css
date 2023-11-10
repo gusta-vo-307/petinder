@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    text-align: center;
+    color: aliceblue;
+    background: rgb(27,244,237);
+    background: linear-gradient(90deg, rgba(27,244,237,0.7289040616246498) 3%, rgba(95,95,247,1) 56%, rgba(192,0,255,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; 
+    margin-bottom: 20px;
+}
+
+form {
+    --bg-light: #efefef;
+    --bg-dark: #d4d4d4;
+    --clr: #1f219e;
+    --clr-alpha: #d8d8d860;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 40%;
+    margin:0 auto;
+  }
+  
+  .form .input-txt {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  
+  form input[type="email"],
+  form input[type="password"] {
+    border-radius: 0.5rem;
+    padding: 1rem 0.75rem;
+    width: 100%;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--clr-alpha);
+    outline: 2px solid var(--bg-dark);
+  }
+  
+  form input[type="email"]:focus,
+  form input[type="password"]:focus {
+    outline: 2px solid var(--clr);
+  }
+  
+  .label {
+    align-self: flex-start;
+    color: var(--clr);
+    font-weight: 600;
+  }
+  
+  form .submit {
+    padding: 1rem 0.75rem;
+    width: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 3rem;
+    background-color: var(--bg-dark);
+    color: var(--bg-light);
+    border: none;
+    cursor: pointer;
+    transition: all 300ms;
+    font-weight: 600;
+    font-size: .9rem;
+  }
+  
+  form .submit:hover {
+    background-color: var(--clr-alpha);
+    color: #1f219e;
+  }
+  
+  .span {
+    text-decoration: none;
+    color: var(--bg-dark);
+  }
+  
+  .span a {
+    color: var(--clr);
+  }

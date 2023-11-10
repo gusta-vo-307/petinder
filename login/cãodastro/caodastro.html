@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cadastro de Animal </title>
+    <link rel="stylesheet" href="caodastro.css">
+</head>
+
+<body>
+    <h1><strong>Cãodastro</strong></h1>
+    <div id="container0"><img src="./img caodastro/desenho-de-cao-w.png" alt="logotipo"></div>
+    <div>
+        <label for="porte">Porte</label>
+        <select id="porte">
+            <option style="color: black;" value="pequeno">Pequeno</option>
+            <option style="color: black;" value="medio">Médio</option>
+            <option style="color: black;" value="grande">Grande</option>
+            <option style="color: black;" value="Filhote">Filhote</option>
+        </select>
+    </div>
+    <div>
+        <label for="sexo">Sexo</label>
+        <select id="sexo">
+            <option style="color: black;" value="macho">Macho</option>
+            <option style="color: black;" value="femea">Fêmea</option>
+        </select>
+    </div>
+    <div>
+        <label for="personalidade">Personalidade</label>
+        <select id="personalidade">
+            <option style="color: black;" value="macho">Calmo</option>
+            <option style="color: black;" value="moderado">Moderado</option>
+            <option style="color: black;" value="agitado">Agitado</option>
+        </select>
+    </div>
+    <div class="custom-checkbox">
+        <p><strong> Castrado ? </strong></p>
+        <label for="check1">
+            <input id="check1" type="checkbox" name="sim"> Sim
+        </label>
+        <label for="check1">
+            <input id="check1" type="checkbox" name="não"> Não
+        </label>
+
+    </div>
+    <div class="custom-checkbox">
+        <p><strong> Problemas de Saúde ? </strong></p>
+        <label for="sim">
+            <input type="checkbox" name="sim" id="sim"> Sim
+        </label>
+        <label for="Não">
+            <input type="checkbox" name="não" id="nao"> Não
+        </label>
+
+    </div>
+    <div class="custom-checkbox">
+        <p><strong> Vacinas em dia ? </strong></p>
+        <label for="sim">
+            <input type="checkbox" name="sim" id="sim"> Sim
+        </label>
+        <label for="Não">
+
+            <input type="checkbox" name="não" id="nao"> Não
+        </label>
+
+        <div>
+            <label class="picture" for="picture__input" tabIndex="0">
+                <span class="picture__image"></span>
+            </label>
+
+            <input type="file" name="picture__input" id="picture__input">
+        </div>
+
+    </div>
+    <div>
+        <input type="text" name="Fale mais sobre" id="fale" placeholder="Fale mais sobre">
+    </div>
+    <button id="button">
+        <a href="http://127.0.0.1:5500/cadastro.html">
+            <input type="submit" onclick="adicionarAnimal()" value="Adicionar animal" />
+    </button>
+    </a>
+</body>
+
+</html>
