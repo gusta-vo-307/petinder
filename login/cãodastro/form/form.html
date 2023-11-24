@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./form.css">
+  <title>Document</title>
+</head>
+<body>
+ 
+    <section>
+      <header class="title">Animais Cadastrados</header>
+      <br>
+      <section class="container-lista">
+        <div class="card">
+          <div class="rounded-photo">
+            <img class="container-img" src="images/desenho-de-cao.jpg" alt="foto-dog">
+          </div>
+          <div class="card-details">
+            <p class="text-title" id="apelido">Aupelido: </p>
+            <p class="text-body">Porte:</p>
+            <p class="text-body">Sexo: </p>
+            <p class="text-body">Personalidade: </p>
+            <p class="text-body">Tutor: </p>
+            <p class="text-body">Castrado: </p>
+            <p class="text-body">Telefone: </p>
+            <button type="button"></button>    
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script>
+ 
+const apelido = document.querySelector('#apelido');
+console.log(apelido)
+
+const dog = {
+    apelido: 'Sky',
+    personalidade: 'Bem',
+    tutor: 'Gustavo',
+    castrado: false,
+    telefone: '90909090',
+}
+
+console.log(dog.apelido) 
+
+  </script>
+</body>
+</html>

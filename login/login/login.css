@@ -12,7 +12,7 @@ html, body {
 
 body {
     text-align: center;
-    color: aliceblue;
+    color: #1f219e;;
     background: rgb(27,244,237);
     background: linear-gradient(90deg, rgba(27,244,237,0.7289040616246498) 3%, rgba(95,95,247,1) 56%, rgba(192,0,255,1) 100%);
     background-repeat: no-repeat;
@@ -49,7 +49,7 @@ form {
     gap: .5rem;
   }
   
-  form input[type="email"],
+  form input[type="telefone"],
   form input[type="password"] {
     border-radius: 0.5rem;
     padding: 1rem 0.75rem;
@@ -82,7 +82,7 @@ form {
     gap: 0.5rem;
     border-radius: 3rem;
     background-color: var(--bg-dark);
-    color: var(--bg-light);
+    color: #1f219e;;
     border: none;
     cursor: pointer;
     transition: all 300ms;
