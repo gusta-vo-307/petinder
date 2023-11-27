@@ -1,8 +1,9 @@
 function adicionar(event) {
     event.preventDefault();
-    
+    //mandar obj dog 
         const dog = {
             apelido: document.getElementById("aupelido").value,
+            idade: document.getElementById("idade").value,
             porte: document.querySelector("[name= 'porte']:checked").value,
             personalidade: document.querySelector("[name='personalidade']:checked").value,
             tutor: document.getElementById("nomett").value,

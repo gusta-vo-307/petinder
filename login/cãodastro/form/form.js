@@ -21,7 +21,7 @@ function exibirDados(data) {
 
     const img = document.createElement('img');
     img.classList.add('container-img');
-    img.src = '';//colocar a url da rota que o j mandar
+    img.src = 'localhost:8080/dogs/cadastrar';
     img.alt = 'foto-dog';
 
     roundedPhoto.appendChild(img);
