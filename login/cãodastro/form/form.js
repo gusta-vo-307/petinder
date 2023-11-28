@@ -63,12 +63,15 @@ const fazFetch = async () => {
     const joao = await gu.json()
 
     for (const cao of joao) {
-        const el = document.querySelector(".container-lista");
+        const el = $(".container-lista");
 
         console.log(cao)
 
-        el.innerHTML += `
-            <div class="card">
+        el.append(`
+            <div class="card" id="${cao["id"]}">
+                <div class="gu-gay">
+                </div>
+            
                 <div class="rounded-photo">
                     <img class="container-img" src="${cao["image"]}" alt="foto-dog">
                 </div>
@@ -77,20 +80,33 @@ const fazFetch = async () => {
                     <p class="text-title" id="apelido">Aupelido: ${cao["aupelido"]}</p>
                     <p class="text-body">Porte: ${cao["porte"]} </p> 
                     <p class="text-body">Idade: ${cao["idade"]} </p>
-                    <p class="text-body">Sexo: ${cao["sexo"]} </p>
+                    <p class="text-body">Sexo: ${cao["sexo"] ? "Macho": "Fêmea"} </p>
                     <p class="text-body">Personalidade: ${cao["personalidade"]} </p>
                     <p class="text-body">Tutor: ${cao["tutor"]}</p>
                     <p class="text-body">Castrado: ${cao["castrado"]}</p>
-                    <p class="text-body">Telefone: ${cao["telefone"]}</p>
-                    <a href="https://api.whatsapp.com/send/?phone=${cao["telefone"]}&text&type=phone_number&app_absent=0">Contato </a>
+                    <p class="text-body">Telefone: ${cao["tutorContato"]}</p>
+                    <a id="btn" target="_blank" href="https://api.whatsapp.com/send/?phone=${cao["tutorContato"]}&text&type=phone_number&app_absent=0">Contato </a>
                     
                 </div>
             </div>
-        `
-    }
+        `)
+
+        const button = $(`<ion-icon class="lixo" name="trash-outline"></ion-icon>`)
+
+        button.on("click", function () {
+            fetch(`http://localhost:8080/dogs/${$(this).parent().parent().attr("id")}`, {
+                method: "DELETE"
+            })
+
+            $(this).parent().parent().remove();
+        })
+
+        el.find(".gu-gay").append(button)
+     }
 }
-//https://api.whatsapp.com/send/?phone=${dog["telefone"]}&text&type=phone_number&app_absent=0
+
 fazFetch();
+
 
 const fazFetchUnico = async () => {
     const gu = await fetch(`http://localhost:8080/dogs/listar/${1}`, {
