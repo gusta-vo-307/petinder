@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+body *{
+    font-family: 'Nunito', sans-serif;
+}
 
 body{
     background: linear-gradient(90deg, rgba(27,244,237,0.7289040616246498) 3%, rgba(95,95,247,1) 56%, rgba(192,0,255,1) 100%);
@@ -35,24 +39,24 @@ p {
 #center{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    vertical-align: auto;
-        
 }
 
 .fotao{
     max-width: 500px;
     max-height: 500px;
 }
-h2 {
-    border: 1px solid red ;
+h2 {        
     display: grid;
     grid-template-columns: 1fr 1fr;
     font-size: 30px;
     display: inline;
     margin-left: 130px;
+}
+.sub-title {
+    display: flex;
+    
 
 }
-
 
 
 #bottone5 {

@@ -21,7 +21,6 @@ body {
     grid-area: col1;
     display: flex;
     flex-direction: row;
-    aling-itens: center;
     justify-content: flex-start;
   }
   

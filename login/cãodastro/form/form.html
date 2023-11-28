@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+
   <link rel="stylesheet" href="./form.css">
   <title>Document</title>
 </head>
@@ -12,40 +14,13 @@
       <header class="title">Animais Cadastrados</header>
       <br>
       <section class="container-lista">
-        <div class="card">
-          <div class="rounded-photo">
-            <img class="container-img" src="images/desenho-de-cao.jpg" alt="foto-dog">
-          </div>
-          <div class="card-details">
-            <p class="text-title" id="apelido">Aupelido: </p>
-            <p class="text-body">Porte:</p>
-            <p class="text-body">Idade: </p>
-            <p class="text-body">Sexo: </p>
-            <p class="text-body">Personalidade: </p>
-            <p class="text-body">Tutor: </p>
-            <p class="text-body">Castrado: </p>
-            <p class="text-body">Telefone: </p>
-            <button type="button">Contato </button>    
-          </div>
-        </div>
+       <button type="button"> <ion-icon name="trash-outline"></ion-icon></button>
+
+
       </section>
     </section>
   </main>
-  <script>
- 
-const apelido = document.querySelector('#apelido');
-console.log(apelido)
 
-const dog = {
-    apelido: 'Sky',
-    personalidade: 'Bem',
-    tutor: 'Gustavo',
-    castrado: false,
-    telefone: '90909090',
-}
-
-console.log(dog.apelido) 
-
-  </script>
+  <script src="./form.js"></script>
 </body>
 </html>

@@ -8,8 +8,8 @@ function adicionar() {
     }
 
     exibirDados(data);
-}
-
+} 
+  
 function exibirDados(data) {
     const containerLista = document.querySelector('.container-lista');
 
@@ -47,8 +47,57 @@ function exibirDados(data) {
     const button = document.createElement('button');
     button.type = 'button';
 
+    const numeroTel = "telefone"
+    const linkWhatsApp = `https://wa.me/${numeroTel}`
+
     card.appendChild(roundedPhoto);
     card.appendChild(cardDetails);
     containerLista.appendChild(card);
-}
+} 
 
+const fazFetch = async () => {
+    const gu = await fetch('http://localhost:8080/dogs/listar', {
+        method: "GET"
+    })
+    
+    const joao = await gu.json()
+
+    for (const cao of joao) {
+        const el = document.querySelector(".container-lista");
+
+        console.log(cao)
+
+        el.innerHTML += `
+            <div class="card">
+                <div class="rounded-photo">
+                    <img class="container-img" src="${cao["image"]}" alt="foto-dog">
+                </div>
+
+                <div class="card-details">
+                    <p class="text-title" id="apelido">Aupelido: ${cao["aupelido"]}</p>
+                    <p class="text-body">Porte: ${cao["porte"]} </p> 
+                    <p class="text-body">Idade: ${cao["idade"]} </p>
+                    <p class="text-body">Sexo: ${cao["sexo"]} </p>
+                    <p class="text-body">Personalidade: ${cao["personalidade"]} </p>
+                    <p class="text-body">Tutor: ${cao["tutor"]}</p>
+                    <p class="text-body">Castrado: ${cao["castrado"]}</p>
+                    <p class="text-body">Telefone: ${cao["telefone"]}</p>
+                    <a href="https://api.whatsapp.com/send/?phone=${cao["telefone"]}&text&type=phone_number&app_absent=0">Contato </a>
+                    
+                </div>
+            </div>
+        `
+    }
+}
+//https://api.whatsapp.com/send/?phone=${dog["telefone"]}&text&type=phone_number&app_absent=0
+fazFetch();
+
+const fazFetchUnico = async () => {
+    const gu = await fetch(`http://localhost:8080/dogs/listar/${1}`, {
+        method: "GET"
+    })
+    
+    const joao = await gu.json()
+
+    console.log(joao);
+}
