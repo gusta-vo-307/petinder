@@ -69,7 +69,7 @@ const fazFetch = async () => {
 
         el.append(`
             <div class="card" id="${cao["id"]}">
-                <div class="gu-gay">
+                <div class="dil">
                 </div>
             
                 <div class="rounded-photo">
@@ -101,9 +101,51 @@ const fazFetch = async () => {
             $(this).parent().parent().remove();
         })
 
-        el.find(".gu-gay").append(button)
-     }
+        el.find(".dil").append(button)
+        const editButton = $(`<i class="lapis ph-pencil"></i>`)
+        editButton.on("click", function () {
+            fetch(`http://localhost:8080/dogs/${$(this).parent().parent().attr("id")}`, {
+                method: "PUT"
+            })
+            
+            $(this).parent().parent().edit();
+        })
+        
+        el.find(".dil").append(button)
+    }
 }
+    
+/**function editarDog(id) {
+  
+    const form = document.getElementById('form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const formData = new FormData(form);
+        const data = {};
+
+        for (const [key, value] of formData.entries()) {
+            data[key] = value;
+        }
+
+        fetch(`http://localhost:8080/dogs/alterar/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    });
+}**/
+
+
+
 
 fazFetch();
 
